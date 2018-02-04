@@ -6,7 +6,7 @@ describe "as a user" do
     job = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver")
 
     visit "/companies/#{company.id}/jobs"
-save_and_open_page
+
     click_on "Delete"
 
     expect(page).not_to have_content("Developer")
