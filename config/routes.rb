@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :companies do
-    resources :jobs
+    resources :jobs, only: [:new, :create, :index, :show, :destroy, :edit, :update]
 
   end
   resources :categories, only: [:new, :index, :create, :edit, :update]
