@@ -12,8 +12,9 @@ describe 'something to be performed' do
       fill_in "comment[content]",	with: "Great place to work!"
 
       click_on "Add Comment"
-
+save_and_open_page
       expect(current_path).to eq(company_job_path(company, job))
+      expect(page).to have_content("Great place to work!")
     end
   end
 end
