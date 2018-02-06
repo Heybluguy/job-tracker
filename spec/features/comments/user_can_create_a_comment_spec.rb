@@ -8,6 +8,12 @@ describe 'something to be performed' do
       visit company_job_path(company, job)
 
       expect(page).to have_button("Add Comment")
+
+      fill_in "comment[content]",	with: "Great place to work!"
+
+      click_on "Add Comment"
+
+      expect(current_path).to eq(company_job_path(company, job))
     end
   end
 end

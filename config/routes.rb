@@ -5,12 +5,12 @@ Rails.application.routes.draw do
 
   end
 
-  resources :categories, only: [:new, :index,:create, :show, :edit, :update] do
+  resources :categories, only: [:new, :index, :create, :show, :edit, :update] do
     resources :jobs, only: [:index]
   end
 
   resources :jobs do
-    resources :comments, only: [:index]
+    resources :comments, only: [:index, :create]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
