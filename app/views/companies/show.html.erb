@@ -1,9 +1,10 @@
 All Jobs for <strong><%= @company.name %></strong>
 <ul>
-<% @company.jobs.each do |job| %>
-  <li>
-  <%= job.title %>
-  </li>
-<% end %>
+  <% @company.jobs.each do |job| %>
+    <li>
+      <%= job.title %>
+    </li>
+  <% end %>
 </ul>
+
 
