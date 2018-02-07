@@ -3,7 +3,11 @@ class JobsController < ApplicationController
     @company = Company.find(params[:company_id])
     @contact = @company.contacts.new
     @contacts = @company.contacts
-    @jobs = @company.jobs
+    if params[:sort]==location
+      @jobs = @company.jobs.order(city: :asc)
+    else  
+      @jobs = @company.jobs
+    end
   end
 
   def new
