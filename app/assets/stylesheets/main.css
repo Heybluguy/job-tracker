@@ -39,7 +39,7 @@ color:rgb(2, 15, 24)
 }
 
 input[type=text], select {
-    width: 100%;
+    width: 75%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -106,19 +106,25 @@ ul a:hover {
     color: rgb(19, 112, 136);
     background-color: rgba(0, 0, 0, 0.5)
 }
-.form-container {
+.form {
+
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e5/Post-it-note-transparent.png" );
+    background-size: 110%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     border-radius: 5px;
     background-color: #f2f2f223;
-    padding: 50px;
-    padding-top: 0px;
+    padding: 60px;
+    /* padding-top: 0px; */
     margin-top: 1px;
     margin-right: 400px;
     margin-left: 400px;
     color: rgb(10, 140, 192);
-    font-family: 'Pathway Gothic One', sans-serif;
-    font-size: 40px;
+    font-family: 'marker felt', sans-serif;
+    /* font-size: 30px;
     letter-spacing: 4px;
-    line-height: 150%;
+    line-height: 15%; */
     text-align: center;
 }
 

@@ -4,6 +4,7 @@
     <% @jobs.each do |job| %>
   <div class='single-container' >
     <h3><%= link_to "#{job.title}", company_job_path(@company, job) %> at <%= job.company.name %></h3>
+    <p><%= link_to "Edit", edit_company_path(@company) %></p>
     <p><%= link_to "Delete", company_job_path(@company, job), method: :delete %></p>
   </div>
     <% end %>
