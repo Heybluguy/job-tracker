@@ -10,8 +10,8 @@ describe "as a user" do
 
       visit root_path
 
-      expect(page).to have_content("61..70: 2 jobs")
-      expect(page).to have_content("0..10: 1 jobs")
+      expect(page).to have_content("2 jobs Level of Interest: 61..70")
+      expect(page).to have_content("1 jobs Level of Interest: 0..10")
     end
   end
 end
