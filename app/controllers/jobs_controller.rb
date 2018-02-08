@@ -3,11 +3,7 @@ class JobsController < ApplicationController
     @company = Company.find(params[:company_id])
     @contact = @company.contacts.new
     @contacts = @company.contacts
-    if params[:sort]==location
-      @jobs = @company.jobs.order(city: :asc)
-    else  
-      @jobs = @company.jobs
-    end
+
   end
 
   def new
@@ -56,4 +52,5 @@ class JobsController < ApplicationController
   def job_params
     params.require(:job).permit(:title, :description, :level_of_interest, :city)
   end
+
 end

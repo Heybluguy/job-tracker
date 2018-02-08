@@ -11,15 +11,17 @@ class CompaniesController < ApplicationController
     @company = Company.new(company_params)
     if @company.save
       flash[:success] = "#{@company.name} added!"
-      redirect_to company_path(@company)
+      redirect_to company_jobs_path(@company)
     else
       render :new
     end
   end
 
   def show
-    company = Company.find(params[:id])
-    redirect_to company_jobs_path(company)
+    @company = Company.find(params[:company_id])
+    @jobs = @company.jobs
+    @contact = @company.contacts.new
+    @contacts = @company.contacts
   end
 
   def edit
@@ -31,7 +33,7 @@ class CompaniesController < ApplicationController
     @company.update(company_params)
     if @company.save
       flash[:success] = "#{@company.name} updated!"
-      redirect_to company_path(@company)
+      redirect_to company_jobs_path(@company)
     else
       render :edit
     end
