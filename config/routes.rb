@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "dashboards#index"
+
   get "/companies/:company_id/jobs", to:"companies#show", as:"company_jobs"
   resources :companies, only: [ :new, :index, :create, :edit, :update, :destroy] do
     resources :contacts, only: [:index, :create]
@@ -12,19 +14,6 @@ Rails.application.routes.draw do
 
   resources :categories, only: [:new, :create, :index, :edit, :update, :show]
 
-
-  # resources :companies do
-  #   resources :jobs
-  #   resources :contacts, only: [:index, :create]
-  # end
-
-  # resources :categories, only: [:new, :index, :create, :show, :edit, :update] do
-  #   resources :jobs, only: [:index]
-  # end
-
-  # resources :jobs do
-  #   resources :comments, only: [:index, :create]
-  # end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
