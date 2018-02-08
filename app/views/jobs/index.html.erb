@@ -1,8 +1,11 @@
-
-<% @jobs.each do |job| %>
-<p>
-  <%= job.title %>
-  <%= job.city %><br>
-  <%= job.level_of_interest %><br>
-</p>
-<% end %>
+<div class='jobs-container'>
+  <% @jobs.each do |job| %>
+<div class='job-container'>
+    <p>
+      <%= link_to job.title, company_job_path(job.company, job) %>
+      <%= job.city %><br>
+      <%= job.level_of_interest %><br>
+    </p>
+    </div>
+  <% end %>
+</div>
