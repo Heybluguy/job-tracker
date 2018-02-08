@@ -1,34 +1,37 @@
-All Jobs for <strong><%= @company.name %></strong>
+<H3>All Jobs for <strong><%= @company.name %></strong></H3><br>
+    <h3><%= link_to "Create a new Job", new_company_job_path(@company) %> at <%= @company.name %></h3>
+<div class='all-container'>
+    <% @jobs.each do |job| %>
+  <div class='single-container' >
+    <h3><%= link_to "#{job.title}", company_job_path(@company, job) %> at <%= job.company.name %></h3>
+    <p><%= link_to "Delete", company_job_path(@company, job), method: :delete %></p>
+  </div>
+    <% end %>
 
-<%= link_to "Create a new Job", new_company_job_path(@company) %> at <%= @company.name %>
+  <div class='single-container'>
+    <p>
+      Contacts:
+      <br>
+      <% @contacts.each do |contact| %>
+        <h3><%= contact.full_name %></h3>
+        <p><%= contact.position %></p>
+        <p><%= contact.email %></p>
+      <% end %>
+    </p>
+  </div>
 
+  <div class='single-container'>
 
-<% @jobs.each do |job| %>
-  <ul>
-    <%= link_to "#{job.title}", company_job_path(@company, job) %> at <%= job.company.name %><br>
-    <%= link_to "Delete", company_job_path(@company, job), method: :delete %>
-  </ul>
-<% end %>
-
-<p>
-  Contacts:
-  <br>
-  <% @contacts.each do |contact| %>
-    <p><%= contact.full_name %></p>
-    <p><%= contact.position %></p>
-    <p><%= contact.email %></p>
-  <% end %>
-</p>
-
-
-<%= form_for [@company, @contact] do |f| %>
-  <p>
-    <%= f.label :full_name, "Full Name" %><br/>
-    <%= f.text_area :full_name %><br/>
-    <%= f.label :position, "Position" %><br/>
-    <%= f.text_area :position %><br/>
-    <%= f.label :email, "Email Address" %><br/>
-    <%= f.text_area :email %><br/>
-  </p>
-  <p><%= f.submit "Add Contact"%></p>
-<% end %>
+    <%= form_for [@company, @contact] do |f| %>
+      <p>
+        <%= f.label :full_name, "Full Name" %><br/>
+        <%= f.text_area :full_name %><br/>
+        <%= f.label :position, "Position" %><br/>
+        <%= f.text_area :position %><br/>
+        <%= f.label :email, "Email Address" %><br/>
+        <%= f.text_area :email %><br/>
+      </p>
+      <p><%= f.submit "Add Contact"%></p>
+    <% end %>
+  </div>
+</div>

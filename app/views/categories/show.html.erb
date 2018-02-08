@@ -1,9 +1,9 @@
-All Jobs for <strong><%= @category.title %></strong>
+<h3>All Jobs for <strong><%= @category.title %></strong></h3>
 
-<ul>
-<% @category.jobs.each do |job| %>
-  <li>
-  <%= job.title %>
-  </li>
-<% end %>
-</ul>
+<div class='all-container'>
+    <% @category.jobs.each do |job| %>
+  <div class='single-container'>
+      <%= job.title %>
+  </div>
+    <% end %>
+</div>

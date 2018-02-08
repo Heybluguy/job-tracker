@@ -1,10 +1,12 @@
-<div class='jobs-container'>
+<h3> All Jobs </h3>
+<div class='all-container'>
   <% @jobs.each do |job| %>
-<div class='job-container'>
+<div class='single-container'>
     <p>
-      <%= link_to job.title, company_job_path(job.company, job) %>
-      <%= job.city %><br>
-      <%= job.level_of_interest %><br>
+      <h3>Job Title: <%= link_to job.title, company_job_path(job.company, job) %></h3>
+      <p>Description : <%= job.description %>
+      <p>Location: <%= job.city %></p>
+      <p>Level of Interest: <%= job.level_of_interest %></p>
     </p>
     </div>
   <% end %>

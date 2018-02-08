@@ -1,3 +1,9 @@
-<% @grouped_jobs.each do |job| %>
-  <%= job.first %>: <%= job.last %> jobs <br>
-<% end %>
+<h3> Dashboard </h3>
+<div class='all-container'>
+    <% @grouped_jobs.each do |job| %>
+    <div class='single-container'>
+       <p><%= job.last %> jobs</p>
+      <H3>Level of Interest: <%= job.first %></H3>
+    </div>
+  <% end %>
+</div>
