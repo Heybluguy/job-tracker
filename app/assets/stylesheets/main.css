@@ -38,6 +38,8 @@ h3 {
     color:rgb(2, 15, 24)
 }
 
+
+
 input[type=text], select {
     width: 75%;
     padding: 12px 20px;
@@ -86,8 +88,11 @@ input[type=submit]:hover {
     justify-content: center;
     flex-direction: column;
     padding: 50px;
-
 }
+
+body, html {
+    cursor: url("https://png.pngtree.com/element_pic/00/16/09/1457d8f5bf0bd20.jpg"), auto;
+     }
 
 ul {
     float: left;
