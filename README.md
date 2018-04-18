@@ -11,7 +11,7 @@ Run 'bundle install'
 
 Run 'rails db:setup'
 
-Run 'rails s' and use your favorite web browser to go to localhost:3000
+Run 'rails s' and use your favorite web browser to go to localhost:9393
 ---
 ## Learning Goals
 
