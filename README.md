@@ -1,5 +1,18 @@
 # Job Tracker
+---
 
+Welcome to Job Tracker.
+
+There are a few things you need to do to set up before you can start. Here are the steps.
+
+Run 'git clone https://github.com/heybluguy/job-tracker.git' from your terminal in the directory you want to clone to.
+
+Run 'bundle install'
+
+Run 'rails db:setup'
+
+Run 'rails s' and use your favorite web browser to go to localhost:3000
+---
 ## Learning Goals
 
 * Use migrations to create tables with different data types including indexed foreign keys
@@ -67,9 +80,9 @@ The rubric below describes additional functionality that you will need to add to
 [ ] The user can visit `/dashboard` to see
 
     [] A count of jobs by `level_of_interest`
-    
+
     [] The top three companies ranked by average level of interest along with their respective average level of interest.
-    
+
     [] A count of jobs by `location` with a link to visit a page with jobs only in that location. The url should be `/jobs?location=Denver`.
 
 [ ] The user can visit `/jobs?sort=interest` to view a list of the jobs sorted by `level_of_interest`.
