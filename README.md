@@ -3,6 +3,8 @@
 
 Welcome to Job Tracker.
 
+## Link: [Job Tracker](https://sheltered-eyrie-49742.herokuapp.com/)
+
 There are a few things you need to do to set up before you can start. Here are the steps.
 
 Run 'git clone https://github.com/heybluguy/job-tracker.git' from your terminal in the directory you want to clone to.
@@ -11,7 +13,7 @@ Run 'bundle install'
 
 Run 'rails db:setup'
 
-Run 'rails s' and use your favorite web browser to go to localhost:9393
+Run 'rails s' and use your favorite web browser to go to localhost:3000
 ---
 ## Learning Goals
 
